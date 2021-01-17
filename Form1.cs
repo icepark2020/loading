@@ -64,12 +64,10 @@ namespace 快捷登陆财政账务系统
             if (tabControl1.SelectedTab.Name == "tabPage2")
             {
                 i = 1;
-                //MessageBox.Show("groupBox : " + i);
             }
             else
             {
                 i = 0;
-                //MessageBox.Show("groupBox : " + i);
             }
         }
 

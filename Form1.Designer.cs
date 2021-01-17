@@ -402,10 +402,11 @@
             this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 429);
+            this.ClientSize = new System.Drawing.Size(369, 438);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBoxD);
             this.Controls.Add(this.msglabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.Name = "form1";
