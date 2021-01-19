@@ -9,6 +9,7 @@ namespace 快捷登陆财政账务系统
     public partial class form1 : Form
     {
         public int i = 0;
+        public int ceshi;
 
         public form1()
         {
@@ -17,7 +18,14 @@ namespace 快捷登陆财政账务系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            denglu();
+            if (checkBox2.Checked)
+            {
+                isConnected();
+            }
+            else
+            {
+                denglu();
+            }
         }
 
         private void denglu()
@@ -25,12 +33,12 @@ namespace 快捷登陆财政账务系统
             List<GroupBox> gbxs = new List<GroupBox>();
             gbxs.Add(groupBox1);
             gbxs.Add(groupBox2);
-
+            gbxs.Add(groupBox3);
             string num = "";
             int year = (int)numericUpDown1.Value;
             string name = textBox1.Text;
-
-            if (name == "")
+            //Console.WriteLine("name:" + name);
+            if (name == "" || name == "9999")
             {
                 foreach (Control c in gbxs[i].Controls)
                 {
@@ -40,6 +48,14 @@ namespace 快捷登陆财政账务系统
                         //MessageBox.Show("checked : " + c.Text);
                     }
                 }
+                if (name == "9999")
+                {
+                    ceshi = 1;
+                }
+                else
+                {
+                    ceshi = 0;
+                }
             }
             else
             {
@@ -48,8 +64,13 @@ namespace 快捷登陆财政账务系统
 
             string url = string.Format("http://172.17.5.144:9001/download/index.html?u={0}&y={1}&ip=172.17.5.144&port=9001", num, year);
 
-            // MessageBox.Show("url : " + url);
-            if (checkBox1.Checked)
+            if (ceshi == 1)
+
+            {
+                TabPage tab = tabControl1.SelectedTab;
+                MessageBox.Show(string.Format("单位:{0}\n\r \n\r账号 :{1}  年度 :{2}", tab.Text, num, year));
+            }
+            else if (checkBox1.Checked)
             {
                 System.Diagnostics.Process.Start("iexplore.exe", url);
             }
@@ -61,13 +82,30 @@ namespace 快捷登陆财政账务系统
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Name == "tabPage2")
+            string tab = tabControl1.SelectedTab.Name;
+
+            Console.WriteLine("tab:" + tab);
+            switch (tab)
             {
-                i = 1;
-            }
-            else
-            {
-                i = 0;
+                case "tabPage1":
+                    i = 0;
+
+                    break;
+
+                case "tabPage2":
+                    i = 1;
+
+                    break;
+
+                case "tabPage3":
+                    i = 2;
+
+                    break;
+
+                    /*  default:
+                          i = 0;
+
+                          break;*/
             }
         }
 
@@ -79,7 +117,7 @@ namespace 快捷登陆财政账务系统
             }
         }
 
-        public static bool isConnected()
+        private void isConnected()
         {
             try
             {
@@ -88,32 +126,41 @@ namespace 快捷登陆财政账务系统
                 if (reply.Status == IPStatus.Success)
                 {
                     Console.WriteLine("网络连通");
-                    return true;
+                    button1.ForeColor = Color.Green;
+                    msglabel.Text = "网络连接成功!,正在登陆...";
+                    msglabel.ForeColor = Color.Green;
+
+                    denglu();
                 }
                 else
+                {
                     Console.WriteLine("失败");
-                return false;
+                    button1.ForeColor = Color.Red;
+                    msglabel.Text = "网络连接失败,请检查网络!!!";
+                    msglabel.ForeColor = Color.Red;
+                    //MessageBox.Show("无法连接,请检查网络!", "连接网站失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch
             {
-                return false;
+                Console.WriteLine("测试中......");
+
+                msglabel.Text = "测试中......";
+                msglabel.ForeColor = Color.Red;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (isConnected())
+            if (checkBox2.Checked)
             {
-                button2.ForeColor = Color.Green;
-                msglabel.Text = "网络连接成功!,可以开始登陆.";
-                msglabel.ForeColor = Color.Green;
+                checkBox2.Text = "开启『自动登陆』";
             }
             else
             {
-                button2.ForeColor = Color.Red;
-                msglabel.Text = "网络连接失败,请检查网络!!!";
-                msglabel.ForeColor = Color.Red;
-                //MessageBox.Show("无法连接,请检查网络!", "连接网站失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.ForeColor = Color.Black;
+                msglabel.Text = "";
+                checkBox2.Text = "关闭『自动登陆』";
             }
         }
     }

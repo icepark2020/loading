@@ -41,7 +41,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBoxD = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,6 +57,17 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.msglabel = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBoxD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -65,15 +75,18 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(208, 80);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(196, 57);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 47);
+            this.button1.Size = new System.Drawing.Size(146, 69);
             this.button1.TabIndex = 0;
-            this.button1.Text = "开始登陆";
+            this.button1.Text = "登  陆";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -175,24 +188,25 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 108);
+            this.checkBox1.Location = new System.Drawing.Point(5, 107);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 19);
+            this.checkBox1.Size = new System.Drawing.Size(180, 19);
             this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "使用IE打开";
+            this.checkBox1.Text = "使用IE浏览器『打开』";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.UseWaitCursor = true;
             // 
             // groupBoxD
             // 
+            this.groupBoxD.Controls.Add(this.checkBox2);
             this.groupBoxD.Controls.Add(this.checkBox1);
+            this.groupBoxD.Controls.Add(this.msglabel);
             this.groupBoxD.Controls.Add(this.numericUpDown1);
-            this.groupBoxD.Controls.Add(this.button2);
             this.groupBoxD.Controls.Add(this.button1);
             this.groupBoxD.Controls.Add(this.textBox1);
             this.groupBoxD.Controls.Add(this.label10);
             this.groupBoxD.Controls.Add(this.label5);
-            this.groupBoxD.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxD.Location = new System.Drawing.Point(12, 22);
             this.groupBoxD.Name = "groupBoxD";
             this.groupBoxD.Size = new System.Drawing.Size(346, 144);
             this.groupBoxD.TabIndex = 1;
@@ -201,7 +215,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(55, 66);
+            this.numericUpDown1.Location = new System.Drawing.Point(277, 25);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             2030,
             0,
@@ -213,7 +227,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(73, 25);
+            this.numericUpDown1.Size = new System.Drawing.Size(69, 25);
             this.numericUpDown1.TabIndex = 5;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -222,24 +236,13 @@
             0,
             0});
             // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(208, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 47);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "网络测试";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("黑体", 10F);
-            this.textBox1.Location = new System.Drawing.Point(7, 24);
+            this.textBox1.Location = new System.Drawing.Point(7, 25);
             this.textBox1.MaxLength = 9;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 27);
+            this.textBox1.Size = new System.Drawing.Size(163, 27);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -247,11 +250,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 71);
+            this.label10.Location = new System.Drawing.Point(193, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 15);
+            this.label10.Size = new System.Drawing.Size(75, 15);
             this.label10.TabIndex = 2;
-            this.label10.Text = "年度:";
+            this.label10.Text = "会计年度:";
             // 
             // label5
             // 
@@ -360,7 +363,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 189);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabControl1.HotTrack = true;
+            this.tabControl1.Location = new System.Drawing.Point(12, 174);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(346, 237);
@@ -392,24 +399,142 @@
             // msglabel
             // 
             this.msglabel.AutoSize = true;
-            this.msglabel.Location = new System.Drawing.Point(88, 165);
+            this.msglabel.Location = new System.Drawing.Point(136, 0);
             this.msglabel.Name = "msglabel";
             this.msglabel.Size = new System.Drawing.Size(0, 15);
             this.msglabel.TabIndex = 2;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(338, 208);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "公会";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.radioButton9);
+            this.groupBox3.Controls.Add(this.radioButton10);
+            this.groupBox3.Controls.Add(this.radioButton11);
+            this.groupBox3.Controls.Add(this.radioButton12);
+            this.groupBox3.Location = new System.Drawing.Point(3, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(328, 197);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "请选择要登陆的账户：";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(36, 162);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 15);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "主管：张天福";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(36, 119);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 15);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "审核：袁  婧";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(36, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 15);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "会计：雷  星";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "出纳：和  洁";
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(145, 75);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(100, 19);
+            this.radioButton9.TabIndex = 1;
+            this.radioButton9.Text = "124038001";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Checked = true;
+            this.radioButton10.Location = new System.Drawing.Point(145, 32);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(92, 19);
+            this.radioButton10.TabIndex = 1;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "12400000";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(145, 158);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(100, 19);
+            this.radioButton11.TabIndex = 1;
+            this.radioButton11.Text = "124038003";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(145, 117);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(100, 19);
+            this.radioButton12.TabIndex = 1;
+            this.radioButton12.Text = "124038002";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(5, 71);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(149, 19);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "开启『自动登陆』";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseWaitCursor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // form1
             // 
-            this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 438);
+            this.ClientSize = new System.Drawing.Size(367, 422);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBoxD);
-            this.Controls.Add(this.msglabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.Name = "form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "财政账务系统-快捷登陆";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -421,8 +546,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -457,7 +584,17 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label msglabel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 
