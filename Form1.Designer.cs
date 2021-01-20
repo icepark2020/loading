@@ -425,7 +425,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(338, 208);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "公会";
+            this.tabPage3.Text = "工会";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
