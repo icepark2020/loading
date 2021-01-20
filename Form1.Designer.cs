@@ -40,6 +40,8 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBoxD = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.msglabel = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,7 +58,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.msglabel = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBoxD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -213,6 +213,28 @@
             this.groupBoxD.TabStop = false;
             this.groupBoxD.Text = "请输入账户名:";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(5, 71);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(149, 19);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "开启『自动登陆』";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseWaitCursor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // msglabel
+            // 
+            this.msglabel.AutoSize = true;
+            this.msglabel.Location = new System.Drawing.Point(136, 0);
+            this.msglabel.Name = "msglabel";
+            this.msglabel.Size = new System.Drawing.Size(0, 15);
+            this.msglabel.TabIndex = 2;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(277, 25);
@@ -288,7 +310,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 15);
             this.label6.TabIndex = 2;
-            this.label6.Text = "主管：张天福";
+            this.label6.Text = "主管：李国辉";
             // 
             // label7
             // 
@@ -297,7 +319,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 15);
             this.label7.TabIndex = 2;
-            this.label7.Text = "审核：袁  婧";
+            this.label7.Text = "审核：杨  洁";
             // 
             // label8
             // 
@@ -306,16 +328,16 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 15);
             this.label8.TabIndex = 2;
-            this.label8.Text = "会计：雷  星";
+            this.label8.Text = "会计：和  洁";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(36, 36);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 15);
+            this.label9.Size = new System.Drawing.Size(97, 15);
             this.label9.TabIndex = 2;
-            this.label9.Text = "出纳：和  洁";
+            this.label9.Text = "出纳：付惠英";
             // 
             // radioButton5
             // 
@@ -324,7 +346,7 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(100, 19);
             this.radioButton5.TabIndex = 1;
-            this.radioButton5.Text = "124038001";
+            this.radioButton5.Text = "124038602";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // radioButton6
@@ -336,7 +358,7 @@
             this.radioButton6.Size = new System.Drawing.Size(100, 19);
             this.radioButton6.TabIndex = 1;
             this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "124038601";
+            this.radioButton6.Text = "124038604";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // radioButton7
@@ -346,7 +368,7 @@
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(100, 19);
             this.radioButton7.TabIndex = 1;
-            this.radioButton7.Text = "124038003";
+            this.radioButton7.Text = "124038601";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton8
@@ -356,7 +378,7 @@
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(100, 19);
             this.radioButton8.TabIndex = 1;
-            this.radioButton8.Text = "124038002";
+            this.radioButton8.Text = "124038603";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // tabControl1
@@ -396,14 +418,6 @@
             this.tabPage2.Text = "服务中心";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // msglabel
-            // 
-            this.msglabel.AutoSize = true;
-            this.msglabel.Location = new System.Drawing.Point(136, 0);
-            this.msglabel.Name = "msglabel";
-            this.msglabel.Size = new System.Drawing.Size(0, 15);
-            this.msglabel.TabIndex = 2;
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -436,18 +450,18 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(36, 162);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 15);
+            this.label11.Size = new System.Drawing.Size(98, 15);
             this.label11.TabIndex = 2;
-            this.label11.Text = "主管：张天福";
+            this.label11.Text = "主管：和  洁";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(36, 119);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 15);
+            this.label12.Size = new System.Drawing.Size(97, 15);
             this.label12.TabIndex = 2;
-            this.label12.Text = "审核：袁  婧";
+            this.label12.Text = "审核：张严今";
             // 
             // label13
             // 
@@ -456,16 +470,16 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 15);
             this.label13.TabIndex = 2;
-            this.label13.Text = "会计：雷  星";
+            this.label13.Text = "会计：和  洁";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(36, 36);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 15);
+            this.label14.Size = new System.Drawing.Size(97, 15);
             this.label14.TabIndex = 2;
-            this.label14.Text = "出纳：和  洁";
+            this.label14.Text = "出纳：张严今";
             // 
             // radioButton9
             // 
@@ -474,7 +488,7 @@
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(100, 19);
             this.radioButton9.TabIndex = 1;
-            this.radioButton9.Text = "124038001";
+            this.radioButton9.Text = "124005603";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // radioButton10
@@ -483,10 +497,10 @@
             this.radioButton10.Checked = true;
             this.radioButton10.Location = new System.Drawing.Point(145, 32);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(92, 19);
+            this.radioButton10.Size = new System.Drawing.Size(100, 19);
             this.radioButton10.TabIndex = 1;
             this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "12400000";
+            this.radioButton10.Text = "124005604";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // radioButton11
@@ -496,7 +510,7 @@
             this.radioButton11.Name = "radioButton11";
             this.radioButton11.Size = new System.Drawing.Size(100, 19);
             this.radioButton11.TabIndex = 1;
-            this.radioButton11.Text = "124038003";
+            this.radioButton11.Text = "124005603";
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // radioButton12
@@ -506,22 +520,8 @@
             this.radioButton12.Name = "radioButton12";
             this.radioButton12.Size = new System.Drawing.Size(100, 19);
             this.radioButton12.TabIndex = 1;
-            this.radioButton12.Text = "124038002";
+            this.radioButton12.Text = "124005604";
             this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(5, 71);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(149, 19);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "开启『自动登陆』";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.UseWaitCursor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // form1
             // 
