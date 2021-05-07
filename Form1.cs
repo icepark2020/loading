@@ -14,6 +14,7 @@ namespace 快捷登陆财政账务系统
         public form1()
         {
             InitializeComponent();
+            numericUpDown1.Value = DateTime.Now.Year;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,7 +63,8 @@ namespace 快捷登陆财政账务系统
                 num = name;
             }
 
-            string url = string.Format("http://172.17.5.144:9001/download/index.html?u={0}&y={1}&ip=172.17.5.144&port=9001", num, year);
+            //string url = string.Format("http://172.17.5.144:9001/download/index.html?u={0}&y={1}&ip=172.17.5.144&port=9001", num, year);
+            string url = string.Format("rwzwstart://u={0}&y={1}&ip=172.17.5.144&port=9001", num, year);
 
             if (ceshi == 1)
 
@@ -131,6 +133,7 @@ namespace 快捷登陆财政账务系统
                     msglabel.ForeColor = Color.Green;
 
                     denglu();
+                   
                 }
                 else
                 {
