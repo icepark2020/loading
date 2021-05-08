@@ -40,24 +40,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage0 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBoxD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage0.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(196, 57);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(196, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 69);
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(146, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "登  陆";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,7 +98,7 @@
             this.groupBoxD.Controls.Add(this.label5);
             this.groupBoxD.Location = new System.Drawing.Point(12, 12);
             this.groupBoxD.Name = "groupBoxD";
-            this.groupBoxD.Size = new System.Drawing.Size(346, 156);
+            this.groupBoxD.Size = new System.Drawing.Size(346, 141);
             this.groupBoxD.TabIndex = 1;
             this.groupBoxD.TabStop = false;
             this.groupBoxD.Text = "请输入账户名:";
@@ -126,7 +129,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(277, 25);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            2030,
+            2050,
             0,
             0,
             0});
@@ -184,12 +187,12 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPage0);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.HotTrack = true;
-            this.tabControl1.Location = new System.Drawing.Point(12, 174);
+            this.tabControl1.Location = new System.Drawing.Point(12, 162);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -197,37 +200,37 @@
             this.tabControl1.TabIndex = 4;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // tabPage0
+            // 
+            this.tabPage0.Controls.Add(this.groupBox1);
+            this.tabPage0.Location = new System.Drawing.Point(4, 25);
+            this.tabPage0.Name = "tabPage0";
+            this.tabPage0.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage0.Size = new System.Drawing.Size(338, 208);
+            this.tabPage0.TabIndex = 0;
+            this.tabPage0.Text = "招考院";
+            this.tabPage0.UseVisualStyleBackColor = true;
+            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(338, 208);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "招考院";
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "服务中心";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(338, 208);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "服务中心";
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "工会";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(338, 208);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "工会";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -242,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 422);
+            this.ClientSize = new System.Drawing.Size(367, 402);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBoxD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -250,14 +253,14 @@
             this.MaximizeBox = false;
             this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "财政账务系统-快捷登陆";
+            this.Text = "财政账务系统-v2.3.1";
             this.groupBoxD.ResumeLayout(false);
             this.groupBoxD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage0.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -272,12 +275,12 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage0;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label msglabel;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBox2;
     }
