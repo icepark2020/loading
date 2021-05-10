@@ -11,6 +11,7 @@ namespace 快捷登陆财政账务系统
     {
         public List<GroupBox> gbList = new List<GroupBox>();
         public int tabControl = 0;
+
         public form1()
         {
             InitializeComponent();
@@ -140,6 +141,27 @@ namespace 快捷登陆财政账务系统
             numericUpDown1.Value = DateTime.Now.Year;
         }
 
+        public bool ThreadExitis(string threadName, bool kill)
+        {
+            bool bo = false;
+
+            System.Diagnostics.Process[] processList = System.Diagnostics.Process.GetProcesses();
+
+            foreach (System.Diagnostics.Process process in processList)
+            {
+                if (kill)
+                {
+                    bo = false;
+                    process.Kill(); //结束进程
+                }
+                else
+                {
+                    bo = true;
+                }
+            }
+            return bo;
+        }
+
         private void isConnected()
         {
             Ping p = new Ping();//172.17.5.3     www.baidu.com
@@ -152,6 +174,13 @@ namespace 快捷登陆财政账务系统
                 msglabel.ForeColor = Color.Green;
 
                 denglu();
+                System.Threading.Thread.Sleep(4000);
+                if (ThreadExitis("RealWare", false))
+                {
+                    msglabel.Text = "  *** 登陆成功. ***  ";
+                }
+               
+               
             }
             else
             {
@@ -184,7 +213,5 @@ namespace 快捷登陆财政账务系统
                 e.Handled = true;
             }
         }
-
-       
     }
 }
