@@ -258,7 +258,7 @@
             this.MinimizeBox = false;
             this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "财政账务系统-v2.3.5";
+            this.Text = "财政账务系统-v2.3.6";
             this.groupBoxD.ResumeLayout(false);
             this.groupBoxD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
